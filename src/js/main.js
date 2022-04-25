@@ -1,6 +1,9 @@
+import time from './modules/time';
+
 window.addEventListener('DOMContentLoaded', () => {
     'use strict';
 
+    time();
 
     const scroll = calcScroll();
 

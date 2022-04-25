@@ -90,12 +90,17 @@
 /*!************************!*\
   !*** ./src/js/main.js ***!
   \************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modules_time__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/time */ "./src/js/modules/time.js");
 
 window.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
+  Object(_modules_time__WEBPACK_IMPORTED_MODULE_0__["default"])();
   const scroll = calcScroll();
 
   function calcScroll() {
@@ -196,6 +201,23 @@ window.addEventListener('DOMContentLoaded', () => {
 
   menu();
 });
+
+/***/ }),
+
+/***/ "./src/js/modules/time.js":
+/*!********************************!*\
+  !*** ./src/js/modules/time.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const time = () => {
+  console.log('Hi!');
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (time);
 
 /***/ })
 

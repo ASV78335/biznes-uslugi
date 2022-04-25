@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'OpenSans';
-    src: url(/fonts/OpenSans-Medium.ttf);
+    src: url(/assets/fonts/OpenSans-Medium.ttf);
 }
 
 * {
@@ -172,7 +172,7 @@ header {
     border: 1px solid grey;
     list-style: none;
     z-index: 5;
-    background-image: url(/img/bg.jpg);
+    background-image: url(/assets/img/bg.jpg);
 }
 
 .top-info__submenu-header {
