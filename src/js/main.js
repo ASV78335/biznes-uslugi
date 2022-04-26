@@ -3,7 +3,7 @@ import time from './modules/time';
 window.addEventListener('DOMContentLoaded', () => {
     'use strict';
 
-    time();
+    time('.top-info-header__current-state', '.top-info-header__current-text');
 
     const scroll = calcScroll();
 

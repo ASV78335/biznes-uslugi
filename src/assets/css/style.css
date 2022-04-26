@@ -243,7 +243,8 @@ flex-direction: column;
 }
 
 .promo-info__img {
-    margin: 8rem 0;
+    width: 200px;
+    margin: 0;
     align-self:center
 }
 
@@ -273,7 +274,7 @@ flex-direction: column;
     padding: 2rem;
     border-radius: 1rem;
     background-color: #f2f6fa;
-    color: #5b5766;
+    color: #5d5e5f;
     font-size: 2rem;
 }
 
