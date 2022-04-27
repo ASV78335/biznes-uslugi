@@ -25,7 +25,7 @@ header {
     top: 0px;
 }
 
-.btn {
+.btn_dark {
     padding: 0.8rem 1.5rem;
     height: 4rem;
     border: 1px solid darkgreen;
@@ -33,15 +33,16 @@ header {
     background-color: darkgreen;
     color: #FFF;
     font-size: 1.6rem;
+    text-decoration: none;
     cursor: pointer;
 }
 
-.btn:hover {
+.btn_dark:hover {
     background-color: #fff;
     color: green;
 }
 
-.btn-light {
+.btn_light {
     padding: 0.8rem 1.5rem;
     height: 4rem;
     border: 1px solid darkgreen;
@@ -49,8 +50,16 @@ header {
     background-color: #fff;
     color: green;
     font-size: 1.6rem;
+    text-decoration: none;
     cursor: pointer;
 }
+
+.btn_light:hover {
+    background-color: darkgreen;
+    color: #FFF;
+}
+
+/* ==================================Top==============================================================*/
 
 .top {
     display: grid;
@@ -58,7 +67,7 @@ header {
     grid-template-rows: 79px 1px 80px;
 }
 
-.top-logo {
+.top__logo {
     grid-column: 1;
     grid-row: 1 / 4;
     display: flex;
@@ -66,7 +75,7 @@ header {
     align-items: center;
 }
 
-.top-info-header {
+.top__header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,7 +85,7 @@ header {
     width: 100%;
 }
 
-.top-info-header__home {
+.top__home {
     width: 300px;
     font-size: 2.2rem;
     font-weight: 500;
@@ -84,20 +93,20 @@ header {
     text-align: center;
 }
 
-.top-info-header__contacts,
-.top-info-header__current {
+.top__contacts,
+.top__current {
     line-height: 2.5rem;
     width: 30rem;
     font-size: 1.4rem;
     text-align: center;
 }
 
-.top-info-header__contacts a {
+.top__contacts a {
     color: #5b5766;
     text-decoration: none;
 }
 
-.top-info-header__current-state {
+.top__current-state {
     position: absolute;
     top: 3rem;
     left: 7rem;
@@ -107,7 +116,7 @@ header {
     border-radius: 100%;
 }
 
-.top-info__divider {
+.top__divider {
     grid-column: 2;
     grid-row: 2;
     height: 1px;
@@ -118,7 +127,7 @@ header {
 
 /* ==================================Menu=============================================================*/
 
-.top-info__menu {
+.menu {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -126,7 +135,7 @@ header {
     padding: 0;
 }
 
-.top-info__menu a {
+.menu a {
     display: flex;
     justify-content: left;
     align-items: center;
@@ -135,7 +144,7 @@ header {
     color: green;
 }
 
-.top-info__menu li {
+.menu li {
     position: relative;
     display: inline-block;
     height: 100%;
@@ -144,7 +153,7 @@ header {
     font-size: 1.4rem;
 }
 
-.top-info__menu a:hover {
+.menu a:hover {
     text-shadow: 0 0 0.5px green;
 }
 
@@ -175,34 +184,35 @@ header {
     background-image: url(/assets/img/bg.jpg);
 }
 
-.top-info__submenu-header {
+.submenu-ul__items_bold, .submenu-fl__items_bold {
     font-weight: bold;
-    height: 60px;
+    /* height: 60px; */
 }
 
-.top-info__submenu-list {
-    font-weight: normal;
+.submenu-ul__items, .submenu-fl__items {
+    /* font-weight: normal; */
     font-size: 1.4rem;
-    height: 40px;
+    /* height: 40px; */
 }
 
-.top-info__submenu-header a {
-    font-size: 1.4rem;
-    color: #000;
-}
-
-.top-info__submenu-header a:hover {
-    text-shadow: 0 0 0.5px #000;
-}
-
-.top-info__submenu-list a {
+.submenu-ul__items a, .submenu-fl__items a {
     font-size: 1.4rem;
     color: grey;
 }
 
-.top-info__submenu-list a:hover {
-    text-shadow: 0 0 0.5px #000;
+.submenu-ul__items a:hover, .submenu-fl__items a:hover {
+    text-shadow: 0 0 0.2px #000;
 }
+
+.submenu-ul__items_bold a, .submenu-fl__items_bold a {
+    font-size: 1.4rem;
+    color: #000;
+}
+
+.submenu-ul__items_bold a:hover, .submenu-ul__items_bold a:hover {
+    text-shadow: 0 0 0.2px #000;
+}
+
 
 .li-wrapper {
     display: flex;
@@ -219,14 +229,14 @@ header {
     align-items: center;
 }
 
-.promo-info {
+.promo__left {
 position: relative;
 width: 45%;
 display: flex;
 flex-direction: column;
 }
 
-.promo-info__title {
+.promo__title {
     margin: 5rem 0;
     font-size: 4rem;
     color: green;
@@ -235,24 +245,24 @@ flex-direction: column;
     text-transform: uppercase;
 }
 
-.promo-info__text {
+.promo__text {
     margin-bottom: 5rem;
     font-size: 1.6rem;
     line-height: 1.6;
     color: grey;
 }
 
-.promo-info__img {
-    width: 200px;
+.promo__img {
+    /* width: 200px; */
     margin: 0;
     align-self:center
 }
 
-.promo-info__img img {
+.promo__img img {
     width: 100%;
 }
 
-.promo-right {
+.promo__right {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -260,15 +270,15 @@ flex-direction: column;
     width: 45%;
 }
 
-.promo-right__img img {
+.promo__img img {
     width: 100%;
 }
 
-.promo-right__area {
-    margin-bottom: 18rem;
+.promo__area {
+    margin-bottom: 8rem;
 }
 
-.promo-right__area-item {
+.promo__area-item {
     display: inline-block;
     margin-right: 1rem;
     padding: 2rem;

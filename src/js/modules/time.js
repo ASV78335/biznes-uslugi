@@ -29,9 +29,6 @@ const time = (timeIndicator, timeInfo) => {
 
     }
 
-    console.log('red')
-    
-    console.log(hours) 
 };
 
 export default time;
