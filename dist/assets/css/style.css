@@ -59,6 +59,7 @@ header {
     color: #FFF;
 }
 
+
 /* ==================================Top==============================================================*/
 
 .top {
@@ -231,12 +232,18 @@ header {
 
 .promo__left {
 position: relative;
-width: 45%;
+width: 55%;
 display: flex;
 flex-direction: column;
 }
 
 .promo__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.promo__title h1 {
     margin: 5rem 0;
     font-size: 4rem;
     color: green;
@@ -253,12 +260,17 @@ flex-direction: column;
 }
 
 .promo__img {
-    /* width: 200px; */
     margin: 0;
-    align-self:center
+    align-self: center
 }
 
-.promo__img img {
+.promo__img_small {
+    width: 60%;
+    margin: 0;
+    align-self: center
+}
+
+.promo__img img, .promo__img_small img {
     width: 100%;
 }
 
@@ -266,8 +278,8 @@ flex-direction: column;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items:center;
-    width: 45%;
+    align-items: center;
+    width: 40%;
 }
 
 .promo__img img {
@@ -275,17 +287,29 @@ flex-direction: column;
 }
 
 .promo__area {
-    margin-bottom: 8rem;
+    display: flex;
+    justify-content: self;
+    align-items: center;
+    margin-bottom: 5rem;
 }
 
 .promo__area-item {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
     margin-right: 1rem;
     padding: 2rem;
+    border: 1px solid #5d5e5f;
     border-radius: 1rem;
     background-color: #f2f6fa;
     color: #5d5e5f;
     font-size: 2rem;
+}
+
+.promo__area-item img {
+    height: 100%;
+    margin-right: 1rem;
 }
 
 
@@ -296,34 +320,37 @@ flex-direction: column;
 }
 
 .services__title {
-    width: 28rem;
-    margin: 3rem auto 6rem;
+    margin: 3rem auto 4rem;
     font-size: 3rem;
     color: green;
     line-height: 1.2;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
+    text-align: center;
 }
 
-.services-infoblock {
+.services__infoblock {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.services-infoblock-item {
+.services .item {
+    margin: 1rem 0 1rem 0;
     padding: 2rem 1rem 4rem 2rem;
-    width: 380px;
+    width: 38rem;
     border-radius: 1rem;
-    box-shadow: 0 0 0.5rem grey;
+    border: 1px solid grey;
+    /* box-shadow: 0 0 0.5rem grey; */
 }
 
-.services-infoblock-item-block {
+.services .item__header {
     display: grid;
     grid-template-columns: 5rem auto;
-    grid-template-rows: 8rem 1px 8rem;
+    grid-template-rows: 79px 1px 80px;
 }
 
-.services-infoblock-item-block__divider {
+.item__divider {
     grid-column: 2;
     grid-row: 2;
     height: 1px;
@@ -331,7 +358,7 @@ flex-direction: column;
     background-color: green;
 }
 
-.services-infoblock-item__img {
+.item__img {
     grid-column: 1;
     grid-row: 1 / 4;
     display: flex;
@@ -339,7 +366,7 @@ flex-direction: column;
     align-items: center;
 }
 
-.services-infoblock-item__title {
+.item__title {
     display: flex;
     align-items: flex-end;
     margin: 1rem 2rem;
@@ -347,44 +374,36 @@ flex-direction: column;
     font-weight: 500;
 }
 
-.services-infoblock-item__subtitle {
+.item__subtitle {
     margin: 1rem 2rem;
     font-size: 2rem;
     font-weight: 600;
 }
 
-.services-infoblock-item__text {
+.item__text {
     min-height: 8rem;
+    height: 8rem;
     font-size: 1.6rem;
     line-height: 1.6;
     color: grey;
-    margin-bottom: 1.9rem;
-}
-
-.services-infoblock-item__btn {
-    text-decoration: none;
-}
-
-.services-infoblock-item__btn:hover {
-    color: #FFF;
-    background-color: darkgreen;
+    margin-bottom: 3rem;
 }
 
 
-/* ==================================About=============================================================*/
+/* ==================================Welcome==============================================================*/
 
-.about {
+.welcome {
     margin-top: 8rem;
 }
 
-.about__title {
-    width: 28rem;
+.welcome__title {
     margin: 3rem auto 6rem;
     font-size: 3rem;
     color: green;
     line-height: 1.2;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .about-boss {
