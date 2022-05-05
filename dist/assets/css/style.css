@@ -394,10 +394,26 @@ flex-direction: column;
 
 .welcome {
     margin-top: 8rem;
+    display: grid;
+    grid-template-columns: 10% auto 10%;
+    grid-template-rows: 500px 100px auto 100px;
+    margin-bottom: 3rem;
 }
 
+.welcome__img {
+    margin: 0 auto;
+    grid-column: 1 / 4;
+    grid-row: 1;
+    justify-content: center;
+}
+
+.welcome__img img {
+    height: 100%;
+}
 .welcome__title {
-    margin: 3rem auto 6rem;
+    grid-column: 1 / 4;
+    grid-row: 2;
+    margin: 3rem auto 4rem;
     font-size: 3rem;
     color: green;
     line-height: 1.2;
@@ -406,69 +422,48 @@ flex-direction: column;
     text-align: center;
 }
 
-.about-boss {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 40rem 8rem 8rem;
-    margin-bottom: 3rem;
-}
-
-.about-boss__img {
+.welcome__quot_top {
     margin: 0 auto;
-    width: 60%;
-    grid-column: 1;
-    grid-row: 1 / 4;
-}
-
-.about-boss__info {
-    margin: 3rem auto;
-    grid-column: 1;
-    grid-row: 2 / 3;
-    font-size: 2rem;
-}
-
-.about-boss__descr {
-    margin: 0 auto;
-    font-size: 1.6rem;
+    width: 20%;
     grid-column: 1;
     grid-row: 3 / 4;
+    align-items: start;
 }
 
-.about-boss__text {
-    grid-row: 1 / 4;
-    font-size: 1.6rem;
-    line-height: 1.6;
-    color: grey;
-}
-
-.about-personal{
-    display: flex;
-    align-items: center;
-    /* border-radius: 1rem;
-    box-shadow: 0 0 0.5rem grey; */
-    margin-bottom: 3rem;
-}
-
-.about-personal-item {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    width: 30rem;
-}
-
-.about-personal__img {
+.welcome__quot_bottom {
     margin: 0 auto;
+    width: 20%;
+    grid-column: 3;
+    grid-row: 3 / 4;
+    align-items: end;
+}
+
+.welcome__quot img {
     width: 100%;
 }
 
-.about-personal__info {
-    margin: 2rem auto 1rem;
-    font-size: 1.6rem;
+.welcome__info {
+    margin: 3rem auto;
+    grid-column: 2 / 3;
+    grid-row: 4;
+    font-size: 2rem;
+    justify-self: end;
+
 }
 
-.about-personal__descr {
+.welcome__descr {
     margin: 0 auto;
-    font-size: 1.2rem;
-    grid-column: 1;
-    grid-row: 3 / 4;
+    font-size: 1.6rem;
+    font-style: italic;
+    grid-column: 2 / 3;
+    grid-row: 4;
+    justify-self: end;
+}
+
+.welcome__text {
+    grid-column: 2;
+    grid-row: 3;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: grey;
 }
