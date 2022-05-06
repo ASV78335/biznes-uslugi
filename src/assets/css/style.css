@@ -59,6 +59,17 @@ header {
     color: #FFF;
 }
 
+.title {
+    grid-column: 1 / 4;
+    grid-row: 2;
+    margin: 3rem auto 4rem;
+    font-size: 3rem;
+    color: green;
+    line-height: 1.2;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    text-align: center;
+}
 
 /* ==================================Top==============================================================*/
 
@@ -398,6 +409,7 @@ flex-direction: column;
     grid-template-columns: 10% auto 10%;
     grid-template-rows: 500px 100px auto 100px;
     margin-bottom: 3rem;
+    padding-bottom: 4rem;
 }
 
 .welcome__img {
@@ -409,17 +421,6 @@ flex-direction: column;
 
 .welcome__img img {
     height: 100%;
-}
-.welcome__title {
-    grid-column: 1 / 4;
-    grid-row: 2;
-    margin: 3rem auto 4rem;
-    font-size: 3rem;
-    color: green;
-    line-height: 1.2;
-    letter-spacing: 0.1rem;
-    text-transform: uppercase;
-    text-align: center;
 }
 
 .welcome__quot_top {
@@ -435,34 +436,54 @@ flex-direction: column;
     width: 20%;
     grid-column: 3;
     grid-row: 3 / 4;
-    align-items: end;
+    display: flex;
+}
+
+.welcome__quot_bottom img {
+    height: auto;
+    align-self: flex-end;
 }
 
 .welcome__quot img {
     width: 100%;
+    height: auto;
 }
 
 .welcome__info {
     margin: 3rem auto;
-    grid-column: 2 / 3;
+    grid-column: 1 / 3;
     grid-row: 4;
     font-size: 2rem;
-    justify-self: end;
-
+    width: 100%;
+    text-align: right;
 }
 
 .welcome__descr {
-    margin: 0 auto;
+    margin-top: 1rem;
     font-size: 1.6rem;
     font-style: italic;
-    grid-column: 2 / 3;
-    grid-row: 4;
-    justify-self: end;
 }
 
 .welcome__text {
     grid-column: 2;
     grid-row: 3;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: grey;
+}
+
+
+
+/* ==================================Accordion=============================================================*/
+
+.accordion__header {
+    margin: 2rem 0 1rem 0;
+    font-size: 2rem;
+    line-height: 2rem;
+    color: grey;
+}
+
+.accordion_block {
     font-size: 1.6rem;
     line-height: 1.6;
     color: grey;
