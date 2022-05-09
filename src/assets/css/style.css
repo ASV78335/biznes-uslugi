@@ -449,6 +449,14 @@ flex-direction: column;
     height: auto;
 }
 
+.welcome__text {
+    grid-column: 2;
+    grid-row: 3;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: grey;
+}
+
 .welcome__info {
     margin: 3rem auto;
     grid-column: 1 / 3;
@@ -464,7 +472,91 @@ flex-direction: column;
     font-style: italic;
 }
 
-.welcome__text {
+
+/* ==================================Accordion=============================================================*/
+
+.accordion {
+    padding-bottom: 5rem;
+}
+
+.accordion__header {
+    margin: 2rem 0 1rem 0;
+    text-decoration: underline dotted;
+    font-size: 2rem;
+    line-height: 2rem;
+    color: grey;
+    cursor: pointer;
+}
+
+.accordion__block {
+    display: none;
+    margin: 2rem 3rem 3rem;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: grey;
+}
+
+.accordion__header_dots {
+    text-decoration: none;
+}
+
+.accordion__block_visible {
+    display: block;
+}
+
+.triangle {
+    display: inline-block;
+    margin-right: 1rem;
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 10px solid green;
+}
+
+.triangle_down {
+    transform: rotate(90deg);
+}
+
+
+/* ==================================Reviews===============================================================*/
+
+.reviews {
+    padding-bottom: 5rem;
+}
+
+.slider {
+    display: flex;
+}
+
+.slider__text {
+    display: flex;
+
+}
+
+.slider__item_hide {
+    display: none;
+}
+
+.arrow_left {
+    width: 4rem;
+    height: 4rem;
+    border-top: 1rem solid green;
+    border-right: 1rem solid green;
+    margin-right: 4rem;
+    transform: rotate(-135deg);
+}
+
+.arrow_right {
+    width: 4rem;
+    height: 4rem;
+    border-top: 1rem solid green;
+    border-right: 1rem solid green;
+    margin-right: 4rem;
+    transform: rotate(45deg);
+}
+
+.slider__text {
     grid-column: 2;
     grid-row: 3;
     font-size: 1.6rem;
@@ -472,19 +564,39 @@ flex-direction: column;
     color: grey;
 }
 
-
-
-/* ==================================Accordion=============================================================*/
-
-.accordion__header {
-    margin: 2rem 0 1rem 0;
+.slider__info {
+    margin: 3rem auto;
+    grid-column: 1 / 3;
+    grid-row: 4;
     font-size: 2rem;
-    line-height: 2rem;
-    color: grey;
+    width: 100%;
+    text-align: right;
 }
 
-.accordion_block {
+.slider__descr {
+    margin-top: 1rem;
     font-size: 1.6rem;
-    line-height: 1.6;
-    color: grey;
+    font-style: italic;
+}
+
+.slider__quot_top {
+    margin: 0 auto;
+    width: 3rem;
+    align-items: start;
+}
+
+.slider__quot_bottom {
+    margin: 0 auto;
+    width: 3rem;
+    display: flex;
+}
+
+.slider__quot_bottom img {
+    height: auto;
+    align-self: flex-end;
+}
+
+.slider__quot img {
+    width: 100%;
+    height: auto;
 }

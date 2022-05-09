@@ -98,6 +98,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/menu */ "./src/js/modules/menu.js");
 /* harmony import */ var _modules_time__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/time */ "./src/js/modules/time.js");
 /* harmony import */ var _utils_calcScroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./utils/calcScroll */ "./src/js/utils/calcScroll.js");
+/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/accordion */ "./src/js/modules/accordion.js");
+/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/slider */ "./src/js/modules/slider.js");
+
+
 
 
 
@@ -107,7 +111,61 @@ window.addEventListener('DOMContentLoaded', () => {
   Object(_modules_menu__WEBPACK_IMPORTED_MODULE_0__["default"])();
   Object(_modules_time__WEBPACK_IMPORTED_MODULE_1__["default"])('.top__current-state', '.top__current-text');
   Object(_utils_calcScroll__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  Object(_modules_accordion__WEBPACK_IMPORTED_MODULE_3__["default"])('.accordion__header');
+  Object(_modules_slider__WEBPACK_IMPORTED_MODULE_4__["default"])('.slider__item', '.arrow_left', '.arrow_right');
 });
+
+/***/ }),
+
+/***/ "./src/js/modules/accordion.js":
+/*!*************************************!*\
+  !*** ./src/js/modules/accordion.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const accordion = block => {
+  const headers = document.querySelectorAll(block);
+  headers.forEach(item => {
+    item.addEventListener('click', function () {
+      item.nextElementSibling.classList.toggle('accordion__block_visible');
+      item.querySelector('.triangle').classList.toggle('triangle_down');
+      item.classList.toggle('accordion__header_dots');
+    });
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (accordion); // const accordion = (triggersSelector) => {
+//     const btns = document.querySelectorAll(triggersSelector);
+//     btns.forEach(btn => {
+//         btn.addEventListener('click', function() {
+//             this.classList.toggle('active-style');
+//             this.nextElementSibling.classList.toggle('active-content');
+//             if (this.classList.contains('active-style')) {
+//                 this.nextElementSibling.style.maxHeight = this.nextElementSibling.scrollHeight + 80 + "px";
+//             } else {
+//                 this.nextElementSibling.style.maxHeight = '0px';
+//             }
+//         });
+//     });
+//   blocks = document.querySelectorAll(itemsSelector);
+// blocks.forEach(block => {
+//     block.classList.add('animated', 'fadeInDown');
+// });
+// btns.forEach(btn => {
+//     btn.addEventListener('click', function() {
+//         if (!this.classList.contains('active')) {
+//             btns.forEach(btn => {
+//                 btn.classList.remove('active', 'active-style');
+//             });
+//             this.classList.add('active', 'active-style');
+//         }
+//     });
+// });
+// };
+// export default accordion;
 
 /***/ }),
 
@@ -187,6 +245,59 @@ const menu = () => {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (menu);
+
+/***/ }),
+
+/***/ "./src/js/modules/slider.js":
+/*!**********************************!*\
+  !*** ./src/js/modules/slider.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const slider = (selector, prev, next) => {
+  const slides = document.querySelectorAll(selector),
+        leftArrow = document.querySelector(prev),
+        rightArrow = document.querySelector(next);
+  let slideIndex = 0;
+
+  function showSlides(n) {
+    if (n > slides.length) {
+      slideIndex = 1;
+    }
+
+    if (n < 1) {
+      slideIndex = slides.length;
+    }
+
+    slides.forEach(item => {
+      item.classList.add("animated");
+      item.style.display = "none";
+    });
+    slides[slideIndex - 1].style.display = 'block';
+  }
+
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  leftArrow.addEventListener('click', () => {
+    plusSlides(-1);
+    slides[slideIndex - 1].classList.remove('slider__item_hide');
+    slides[slideIndex - 1].classList.add('slider__item_hide');
+  });
+  rightArrow.addEventListener('click', () => {
+    plusSlides(1);
+    slides[slideIndex - 1].classList.remove('slider__item_hide');
+    slides[slideIndex - 1].classList.add('slider__item_hide');
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (slider);
 
 /***/ }),
 
