@@ -311,7 +311,7 @@ flex-direction: column;
     height: 6rem;
     margin-right: 1rem;
     padding: 2rem;
-    border: 1px solid #5d5e5f;
+    border: 1px solid lightgray;
     border-radius: 1rem;
     background-color: #f2f6fa;
     color: #5d5e5f;
@@ -351,7 +351,7 @@ flex-direction: column;
     padding: 2rem 1rem 4rem 2rem;
     width: 38rem;
     border-radius: 1rem;
-    border: 1px solid grey;
+    border: 1px solid lightgray;
     /* box-shadow: 0 0 0.5rem grey; */
 }
 
@@ -450,11 +450,14 @@ flex-direction: column;
 }
 
 .welcome__text {
+    padding: 2rem;
     grid-column: 2;
     grid-row: 3;
     font-size: 1.6rem;
     line-height: 1.6;
     color: grey;
+    border-radius: 1rem;
+    border: 1px solid lightgray;
 }
 
 .welcome__info {
@@ -480,7 +483,7 @@ flex-direction: column;
 }
 
 .accordion__header {
-    margin: 2rem 0 1rem 0;
+    margin: 2rem 0 3rem 0;
     text-decoration: underline dotted;
     font-size: 2rem;
     line-height: 2rem;
@@ -529,39 +532,36 @@ flex-direction: column;
     display: flex;
 }
 
-.slider__text {
-    display: flex;
-
-}
-
-.slider__item_hide {
-    display: none;
-}
-
 .arrow_left {
-    width: 4rem;
-    height: 4rem;
-    border-top: 1rem solid green;
-    border-right: 1rem solid green;
-    margin-right: 4rem;
-    transform: rotate(-135deg);
+    align-self: center;
+    width: 6rem;
+    height: 6rem;
+    margin-right: 2rem;
+    cursor: pointer;
 }
 
 .arrow_right {
-    width: 4rem;
-    height: 4rem;
-    border-top: 1rem solid green;
-    border-right: 1rem solid green;
-    margin-right: 4rem;
-    transform: rotate(45deg);
+    align-self: center;
+    width: 6rem;
+    height: 6rem;
+    margin-left: 2rem;
+    cursor: pointer;
 }
 
 .slider__text {
-    grid-column: 2;
-    grid-row: 3;
+    display: flex;
+    height: 25rem;
+    /* width: 110rem; */
     font-size: 1.6rem;
     line-height: 1.6;
     color: grey;
+}
+
+.slider__text p {
+    padding: 2rem;
+    width: 102rem;
+    border-radius: 1rem;
+    border: 1px solid lightgray;
 }
 
 .slider__info {
@@ -580,14 +580,14 @@ flex-direction: column;
 }
 
 .slider__quot_top {
-    margin: 0 auto;
-    width: 3rem;
+    margin: 0 3rem 0 0;
+    width: 2rem;
     align-items: start;
 }
 
 .slider__quot_bottom {
-    margin: 0 auto;
-    width: 3rem;
+    margin: 0 0 0 3rem;
+    width: 2rem;
     display: flex;
 }
 
@@ -599,4 +599,69 @@ flex-direction: column;
 .slider__quot img {
     width: 100%;
     height: auto;
+}
+
+
+/* ==================================Contacts==============================================================*/
+
+.contacts__block {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 40rem 40rem;
+
+}
+
+.contacts__block #center {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.contacts__block #ener {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.contacts__block #map_center {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.contacts__block #map_ener {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.contacts__info,
+.contacts__current {
+    margin-bottom: 1rem;
+    line-height: 2.5rem;
+    width: 30rem;
+    font-size: 1.4rem;
+    text-align: left;
+}
+
+.contacts__info a {
+    color: #5b5766;
+    text-decoration: none;
+}
+
+.contacts__current-state {
+    position: absolute;
+    top: 3rem;
+    /* left: 7rem; */
+    height: 2rem;
+    width: 2rem;
+    background-color: lime;
+    border-radius: 100%;
+}
+
+.contacts__current-text {
+    margin-left: 3rem;
+}
+
+.contacts__info p {
+    margin: 3rem auto 2rem;
+    font-size: 1.6rem;
+    
+
 }

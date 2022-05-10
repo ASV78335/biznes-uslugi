@@ -110,6 +110,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   Object(_modules_menu__WEBPACK_IMPORTED_MODULE_0__["default"])();
   Object(_modules_time__WEBPACK_IMPORTED_MODULE_1__["default"])('.top__current-state', '.top__current-text');
+  Object(_modules_time__WEBPACK_IMPORTED_MODULE_1__["default"])('.contacts__current-state', '.contacts__current-text');
   Object(_utils_calcScroll__WEBPACK_IMPORTED_MODULE_2__["default"])();
   Object(_modules_accordion__WEBPACK_IMPORTED_MODULE_3__["default"])('.accordion__header');
   Object(_modules_slider__WEBPACK_IMPORTED_MODULE_4__["default"])('.slider__item', '.arrow_left', '.arrow_right');
@@ -264,19 +265,18 @@ const slider = (selector, prev, next) => {
   let slideIndex = 0;
 
   function showSlides(n) {
-    if (n > slides.length) {
-      slideIndex = 1;
+    if (n > slides.length - 1) {
+      slideIndex = 0;
     }
 
-    if (n < 1) {
-      slideIndex = slides.length;
+    if (n < 0) {
+      slideIndex = slides.length - 1;
     }
 
     slides.forEach(item => {
-      item.classList.add("animated");
       item.style.display = "none";
     });
-    slides[slideIndex - 1].style.display = 'block';
+    slides[slideIndex].style.display = 'block';
   }
 
   showSlides(slideIndex);
@@ -287,13 +287,9 @@ const slider = (selector, prev, next) => {
 
   leftArrow.addEventListener('click', () => {
     plusSlides(-1);
-    slides[slideIndex - 1].classList.remove('slider__item_hide');
-    slides[slideIndex - 1].classList.add('slider__item_hide');
   });
   rightArrow.addEventListener('click', () => {
     plusSlides(1);
-    slides[slideIndex - 1].classList.remove('slider__item_hide');
-    slides[slideIndex - 1].classList.add('slider__item_hide');
   });
 };
 
@@ -311,8 +307,8 @@ const slider = (selector, prev, next) => {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 const time = (timeIndicator, timeInfo) => {
-  const indicator = document.querySelector(timeIndicator),
-        info = document.querySelector(timeInfo);
+  const indicator = document.querySelectorAll(timeIndicator),
+        info = document.querySelectorAll(timeInfo);
   const ourZone = -8,
         workStart = 9,
         workEnd = 18; // Узнать текущее время и часовой пояс посетителя
@@ -325,11 +321,19 @@ const time = (timeIndicator, timeInfo) => {
   hours = hours + dif; // Сравнить с режимом работы
 
   if (hours > workStart && hours < workEnd) {
-    indicator.style.backgroundColor = 'lime';
-    info.innerHTML = 'Работаем';
+    indicator.forEach(item => {
+      item.style.backgroundColor = 'lime';
+    });
+    info.forEach(item => {
+      item.innerHTML = 'Работаем';
+    });
   } else {
-    indicator.style.backgroundColor = 'red';
-    info.innerHTML = 'Закрыто';
+    indicator.forEach(item => {
+      item.style.backgroundColor = 'red';
+    });
+    info.forEach(item => {
+      item.innerHTML = 'Закрыто';
+    });
   }
 };
 

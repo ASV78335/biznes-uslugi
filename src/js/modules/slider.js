@@ -6,20 +6,19 @@ const slider = (selector, prev, next) => {
     let slideIndex = 0;
 
     function showSlides(n) {
-        if (n > slides.length) {
-            slideIndex = 1;
+        if (n > slides.length - 1) {
+            slideIndex = 0;
         }
 
-        if (n < 1) {
-            slideIndex = slides.length;
+        if (n < 0) {
+            slideIndex = slides.length - 1;
         }
 
         slides.forEach(item => {
-            item.classList.add("animated");
             item.style.display = "none";
         });
 
-        slides[slideIndex - 1].style.display = 'block';
+        slides[slideIndex].style.display = 'block';
     }
 
     showSlides(slideIndex);
@@ -31,14 +30,10 @@ const slider = (selector, prev, next) => {
 
     leftArrow.addEventListener('click', () => {
         plusSlides(-1);
-        slides[slideIndex - 1].classList.remove('slider__item_hide');
-        slides[slideIndex - 1].classList.add('slider__item_hide');
     });
 
     rightArrow.addEventListener('click', () => {
         plusSlides(1);
-        slides[slideIndex - 1].classList.remove('slider__item_hide');
-        slides[slideIndex - 1].classList.add('slider__item_hide');
     });
 
 };

@@ -9,6 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     menu();
     time('.top__current-state', '.top__current-text');
+    time('.contacts__current-state', '.contacts__current-text');
     calcScroll();
     accordion('.accordion__header');
     slider('.slider__item', '.arrow_left', '.arrow_right');

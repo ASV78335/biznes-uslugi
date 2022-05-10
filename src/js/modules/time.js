@@ -1,7 +1,7 @@
 const time = (timeIndicator, timeInfo) => {
 
-    const indicator = document.querySelector(timeIndicator),
-        info = document.querySelector(timeInfo);
+    const indicator = document.querySelectorAll(timeIndicator),
+        info = document.querySelectorAll(timeInfo);
     const ourZone = -8,
         workStart = 9,
         workEnd = 18;
@@ -21,11 +21,20 @@ const time = (timeIndicator, timeInfo) => {
     // Сравнить с режимом работы
 
     if ((hours > workStart) && (hours < workEnd)) {
-        indicator.style.backgroundColor = 'lime';
-        info.innerHTML = 'Работаем';
+        indicator.forEach(item => {
+            item.style.backgroundColor = 'lime';
+        });
+        
+        info.forEach(item => {
+            item.innerHTML = 'Работаем';
+        })
     } else {
-        indicator.style.backgroundColor = 'red';
-        info.innerHTML = 'Закрыто';
+        indicator.forEach(item => {
+            item.style.backgroundColor = 'red';
+        });
+        info.forEach(item => {
+            item.innerHTML = 'Закрыто';
+        })
 
     }
 
