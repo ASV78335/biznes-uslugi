@@ -28,7 +28,7 @@
                             <div class="top__current-state"></div>
                             <div class="top__current-text">Работаем</div>
                         </div>
-                        <button class="btn btn_dark">Получить консультацию</button>
+                        <button class="btn btn_dark btn_popup">Получить консультацию</button>
                     </div>
                     <div class="top__divider"></div>
                     <ul class="menu">
@@ -350,7 +350,49 @@
         </div>
     </section>
 
+    <section>
+        <div class="container">
+            <div class="feedback_footer">
+                <h2 class="title">Остались вопросы? Свяжитесь с нами!</h2>
+                <div class="form">
+                    <form action=# method=POST>
+                        <div class=form__input-wrapper>
+                            <input type=text name=name placeholder="Ваше имя" required>
+                            <input type=text name=phone placeholder="Ваш телефон" required>
+                            <input type=text name=email placeholder="Ваш E-mail">
+                        </div>
+                        <input class=form__input-text name=message type=text placeholder="Задайте ваш вопрос здесь" required>
+                        <button class="btn_dark">Получить консультацию</button>
+                        <p class="form__notice">Перезвоним в рабочее время течение 30 минут</p>
+                    </form>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="feedback-wrapper">
+            <div class="feedback_popup">
+                <h2>Введите ваши данные</h2>
+                <form class="form" action="POST">
+                    <div class=form__input-wrapper_popup>
+                        <input type=text name=name placeholder="Ваше имя" required>
+                        <input type=text name=phone placeholder="Ваш телефон" required>
+                        <input type=text name=email placeholder="Ваш E-mail">
+                    </div>
+                    <button class="btn_dark">Получить консультацию</button>
+                    <p class="form__notice">Перезвоним в рабочее время течение 30 минут</p>
+                </form>
+                <button class="popup_close">
+                    <strong>X</strong>
+                </button>
+            </div>
+        </div>
+    </section>
+
     <script src="script.js"></script>
+
 </body>
 
 </html>

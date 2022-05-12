@@ -608,7 +608,6 @@ flex-direction: column;
     display: grid;
     grid-template-columns: 25% 75%;
     grid-template-rows: 40rem 40rem;
-
 }
 
 .contacts__block #center {
@@ -648,7 +647,6 @@ flex-direction: column;
 .contacts__current-state {
     position: absolute;
     top: 3rem;
-    /* left: 7rem; */
     height: 2rem;
     width: 2rem;
     background-color: lime;
@@ -662,6 +660,103 @@ flex-direction: column;
 .contacts__info p {
     margin: 3rem auto 2rem;
     font-size: 1.6rem;
-    
+}
 
+
+/* ==================================FeedBack==============================================================*/
+
+.feedback_footer {
+    margin: 5rem auto;
+}
+
+form {
+    width: 100%;
+}
+
+.form__input-wrapper {
+    display: flex;
+    margin-bottom: 3rem;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.feedback_footer form input {
+    width: 30%;
+    height: 4rem;
+    border-radius: 1rem;
+    border: 1px solid lightgray;
+    padding: 0 0 0 1rem;
+}
+
+.feedback_footer .form__input-text {
+    display: block;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+form button {
+    display: block;
+    margin: 2rem auto;
+}
+
+.form__notice {
+    display: block;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.feedback-wrapper {
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    z-index: 4;
+    background-color: rgba(30, 30, 30, 0.7);
+}
+
+.feedback_popup {
+    padding: 3rem 4rem;
+    width: 400px;
+    height: 500px;
+    top: calc(50vh - 250px);
+    left: calc(50vw - 200px);
+    background-color: #FFF;
+    border-radius: 1rem;
+    border: 1px solid lightgray;
+}
+
+.feedback_popup h2 {
+    margin: 3rem auto;
+    font-size: 2rem;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.form__input-wrapper_popup {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-bottom: 3rem;
+}
+
+.feedback_popup form input {
+    margin: 1rem 0;
+    width: 100%;
+    height: 4rem;
+    border-radius: 1rem;
+    border: 1px solid lightgray;
+    padding: 0 0 0 1rem;
+}
+
+.popup_close {
+    position: absolute;
+    top: -2.2rem;
+    right: -5rem;
+    font-size: 4rem;
+    color: #FFF;
+    border: none;
+    background: transparent;
+    cursor: pointer;
 }

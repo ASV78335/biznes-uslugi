@@ -3,6 +3,8 @@ import time from './modules/time';
 import calcScroll from './utils/calcScroll';
 import accordion from './modules/accordion';
 import slider from './modules/slider';
+import feedback from './modules/feedback';
+import buttons from './modules/buttons';
 
 window.addEventListener('DOMContentLoaded', () => {
     'use strict';
@@ -13,9 +15,6 @@ window.addEventListener('DOMContentLoaded', () => {
     calcScroll();
     accordion('.accordion__header');
     slider('.slider__item', '.arrow_left', '.arrow_right');
-
-
-
-
-
+    feedback();
+    buttons();
 });
