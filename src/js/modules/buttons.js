@@ -8,6 +8,8 @@ const buttons = () => {
         item.addEventListener('click', () => {
             wrapper.style.display = 'block';
             popup.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+
         })
     })
 

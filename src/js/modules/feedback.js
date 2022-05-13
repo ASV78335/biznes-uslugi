@@ -38,12 +38,16 @@ const feedback = () => {
         item.addEventListener('click', () => {
             item.parentNode.style.display = 'none';
             wrapper.style.display = 'none';
+            document.body.style.overflow = '';
         });
     });
 
-    wrapper.addEventListener('click', () => {
-        wrapper.style.display = 'none';
-        wrapper.children[0].style.display = 'none';
+    wrapper.addEventListener('click', (e) => {
+        if (e.target.classList.contains('feedback-wrapper')) {
+            wrapper.style.display = 'none';
+            wrapper.children[0].style.display = 'none';
+            document.body.style.overflow = '';
+        }
     });
 
     forms.forEach(item => {

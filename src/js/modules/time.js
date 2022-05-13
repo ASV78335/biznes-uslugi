@@ -13,7 +13,10 @@ const time = (timeIndicator, timeInfo) => {
         zone = curTime.getTimezoneOffset(),
         dif = zone / 60 - ourZone;
 
-    
+    // Текущий день недели
+
+    let dayWeek = [7, 1, 2, 3, 4, 5, 6][curTime.getDay()];
+
     // Перевести часы работы в часовой пояс посетителя
 
     hours = hours + dif;
@@ -34,9 +37,19 @@ const time = (timeIndicator, timeInfo) => {
         });
         info.forEach(item => {
             item.innerHTML = 'Закрыто';
-        })
+        });
+    };
 
-    }
+    // Если суббота/воскресенье
+
+    if (dayWeek === 6 || dayWeek === 7) {
+        indicator.forEach(item => {
+            item.style.backgroundColor = 'red';
+        });
+        info.forEach(item => {
+            item.innerHTML = 'Закрыто';
+        });
+    };
 
 };
 
