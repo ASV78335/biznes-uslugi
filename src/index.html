@@ -325,6 +325,40 @@
 
     <section>
         <div class="container">
+            <div class="calc">
+                <h2 class="title">Стоимость бухгалтерского обслуживания</h2>
+                <form action="POST">
+                    <label for="" class="calc__subtitle">Тип услуги:</label>
+                    <p><label class="calc__text"><input type="radio" checked name="type" value="1">Полное обслуживание</label></p>
+                    <p><label class="calc__text"><input type="radio" name="type" value="2">Бухгалтерский и налоговый учет</label></p>
+                    <p><label class="calc__text"><input type="radio" name="type" value="3">Кадровый учет</label></p>
+                    <p><label class="calc__text"><input type="radio" name="type" value="4">Расчет заработной платы</label></p>
+                    <label for="" class="calc__subtitle">Выберите правовую форму:</label>
+                    <p><label class="calc__text"><input type="radio" checked name="pf" value="1.2">ИП</label></p>
+                    <p><label class="calc__text"><input type="radio" name="pf" value="1.5">ООО</label></p>
+                    <p><label class="calc__text"><input type="radio" name="pf" value="1">НКО</label></p>
+                    <label for="" class="calc__subtitle">Выберите систему налогообложения:</label>
+                    <p><label class="calc__text"><input type="radio" checked name="sno" value="2"> ОСНО</label></p>
+                    <p><label class="calc__text"><input type="radio" name="sno" value="2">УСН 15%</label></p>
+                    <p><label class="calc__text"><input type="radio" name="sno" value="1.5">УСН 6%</label></p>
+                    <p><label class="calc__text"><input type="radio" name="sno" value="1.5">ЕСХН</label></p>
+                    <p><label class="calc__text"><input type="radio" name="sno" value="1">Патентная система</label></p>
+                    <p><label class="calc__text"><input type="radio" name="sno" value="1">Нулевая отченость</label></p>
+                    <p><label for="" class="calc__subtitle">Предполагаемое количество документов в месяц:</label></p>
+                    <p><input type="range" name="doc" min="1" max="100" value="50"></p>
+                    <p><label for="" class="calc__subtitle">Количество сотрудников:</label>
+                    <p><input type="range" name="person" min="1" max="100" value="50"></p>
+                    <p><label class="calc__text"><input type="checkbox" name="rar" value="0">Декларации в Росалкогольрегулирование</label></p>
+                    <p><label class="calc__text"><input type="checkbox" name="sno" value="0">Декларации в ГИИСДМДК</label></p>
+
+                    <div class="calc__footer">Итого <span>2500</span> руб.</div>
+                </form>
+
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
             <div class="contacts">
                 <h2 class="title">Как нас найти</h2>
                 <div class="contacts__block">

@@ -112,6 +112,9 @@ __webpack_require__.r(__webpack_exports__);
 window.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
+  document.addEventListener('mousedown', e => {
+    e.preventDefault();
+  });
   Object(_modules_menu__WEBPACK_IMPORTED_MODULE_0__["default"])();
   Object(_modules_time__WEBPACK_IMPORTED_MODULE_1__["default"])('.top__current-state', '.top__current-text');
   Object(_modules_time__WEBPACK_IMPORTED_MODULE_1__["default"])('.contacts__current-state', '.contacts__current-text');

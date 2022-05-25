@@ -760,3 +760,29 @@ form button {
     background: transparent;
     cursor: pointer;
 }
+
+
+/* ==================================Calc==================================================================*/
+
+.calc input {
+    margin-right: 2rem;
+}
+
+.calc__subtitle {
+    font-size: 2rem;
+    line-height: 2;
+    color: grey;    
+}
+
+.calc__text {
+    padding: 2rem;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: grey;
+}
+
+.calc__footer {
+    font-size: 2rem;
+    line-height: 2;
+    color: grey;    
+}

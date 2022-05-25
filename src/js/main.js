@@ -9,6 +9,10 @@ import buttons from './modules/buttons';
 window.addEventListener('DOMContentLoaded', () => {
     'use strict';
 
+    document.addEventListener('mousedown', (e) => {
+        e.preventDefault();
+    });
+    
     menu();
     time('.top__current-state', '.top__current-text');
     time('.contacts__current-state', '.contacts__current-text');
