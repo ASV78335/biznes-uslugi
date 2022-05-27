@@ -328,26 +328,32 @@
             <div class="calc">
                 <h2 class="title">Стоимость бухгалтерского обслуживания</h2>
                 <form action="POST">
-                    <label for="" class="calc__subtitle">Тип услуги:</label>
-                    <p><label class="calc__text"><input type="radio" checked name="type" value="1">Полное обслуживание</label></p>
-                    <p><label class="calc__text"><input type="radio" name="type" value="2">Бухгалтерский и налоговый учет</label></p>
-                    <p><label class="calc__text"><input type="radio" name="type" value="3">Кадровый учет</label></p>
-                    <p><label class="calc__text"><input type="radio" name="type" value="4">Расчет заработной платы</label></p>
-                    <label for="" class="calc__subtitle">Выберите правовую форму:</label>
-                    <p><label class="calc__text"><input type="radio" checked name="pf" value="1.2">ИП</label></p>
-                    <p><label class="calc__text"><input type="radio" name="pf" value="1.5">ООО</label></p>
-                    <p><label class="calc__text"><input type="radio" name="pf" value="1">НКО</label></p>
-                    <label for="" class="calc__subtitle">Выберите систему налогообложения:</label>
-                    <p><label class="calc__text"><input type="radio" checked name="sno" value="2"> ОСНО</label></p>
-                    <p><label class="calc__text"><input type="radio" name="sno" value="2">УСН 15%</label></p>
-                    <p><label class="calc__text"><input type="radio" name="sno" value="1.5">УСН 6%</label></p>
-                    <p><label class="calc__text"><input type="radio" name="sno" value="1.5">ЕСХН</label></p>
-                    <p><label class="calc__text"><input type="radio" name="sno" value="1">Патентная система</label></p>
-                    <p><label class="calc__text"><input type="radio" name="sno" value="1">Нулевая отченость</label></p>
-                    <p><label for="" class="calc__subtitle">Предполагаемое количество документов в месяц:</label></p>
-                    <p><input type="range" name="doc" min="1" max="100" value="50"></p>
-                    <p><label for="" class="calc__subtitle">Количество сотрудников:</label>
-                    <p><input type="range" name="person" min="1" max="100" value="50"></p>
+                    <div for="" class="calc__subtitle">Тип услуги:</div>
+                    <div class="calc__group">
+                        <p><input class="calc__radio" type="radio" name="type" id="type1" value="5" checked><label for="type1" class="calc__text">Полное обслуживание</label> </p>
+                        <p><input class="calc__radio" type="radio" name="type" id="type2" value="4"><label for="type2" class="calc__text">Бухгалтерский и налоговый учет</label> </p>
+                        <p><input class="calc__radio" type="radio" name="type" id="type3" value="3"><label for="type3" class="calc__text">Кадровый учет</label> </p>
+                        <p><input class="calc__radio" type="radio" name="type" id="type4" value="2"><label for="type4" class="calc__text">Расчет заработной платы</label> </p>
+                    </div>
+                    <div for="" class="calc__subtitle">Правовая форма:</div>
+                    <div class="calc__group calc__group_3">
+                        <p><input class="calc__radio" type="radio" name="pf" id="pf1" value="1.5" checked><label for="pf1" class="calc__text">ИП</label> </p>
+                        <p><input class="calc__radio" type="radio" name="pf" id="pf2" value="2"><label for="pf2" class="calc__text">ООО</label> </p>
+                        <p><input class="calc__radio" type="radio" name="pf" id="pf3" value="1"><label for="pf3" class="calc__text">НКО</label> </p>
+                    </div>
+                    <div for="" class="calc__subtitle">Система налогообложения:</div>
+                    <div class="calc__group">
+                        <p><input class="calc__radio" type="radio" name="sno" id="sno1" value="2" checked><label for="sno1" class="calc__text">ОСНО</label> </p>
+                        <p><input class="calc__radio" type="radio" name="sno" id="sno2" value="2"><label for="sno2" class="calc__text">УСН 15%</label> </p>
+                        <p><input class="calc__radio" type="radio" name="sno" id="sno3" value="1.5"><label for="sno3" class="calc__text">УСН 6%</label> </p>
+                        <p><input class="calc__radio" type="radio" name="sno" id="sno4" value="1.5"><label for="sno4" class="calc__text">ЕСХН</label> </p>
+                        <p><input class="calc__radio" type="radio" name="sno" id="sno5" value="1"><label for="sno5" class="calc__text">Патентная система</label> </p>
+                        <p><input class="calc__radio" type="radio" name="sno" id="sno6" value="1"><label for="sno6" class="calc__text">Нулевая отченость</label> </p>
+                    </div>
+                    <div class="calc__subtitle">Предполагаемое количество документов в месяц:</div>
+                    <p><input type="range" name="doc" min="1" max="100" step="1" value="50"></p>
+                    <div class="calc__subtitle">Количество сотрудников:</div>
+                    <p><input type="range" name="person" min="1" max="100" step="1" value="50"></p>
                     <p><label class="calc__text"><input type="checkbox" name="rar" value="0">Декларации в Росалкогольрегулирование</label></p>
                     <p><label class="calc__text"><input type="checkbox" name="sno" value="0">Декларации в ГИИСДМДК</label></p>
 
