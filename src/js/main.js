@@ -5,6 +5,7 @@ import accordion from './modules/accordion';
 import slider from './modules/slider';
 import feedback from './modules/feedback';
 import buttons from './modules/buttons';
+import calc from './modules/calc';
 
 window.addEventListener('DOMContentLoaded', () => {
     'use strict';
@@ -21,4 +22,5 @@ window.addEventListener('DOMContentLoaded', () => {
     slider('.slider__item', '.arrow_left', '.arrow_right');
     feedback();
     buttons();
+    calc();
 });
