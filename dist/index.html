@@ -351,20 +351,20 @@
                         <p><input class="calc__radio" type="radio" name="sno" id="sno6" value="1"><label for="sno6" class="calc__text">Нулевая отченость</label> </p>
                     </div>
                     <div class="calc__subtitle">Предполагаемое количество документов в месяц:</div>
-                    <div class="calc__text" id="doc">50</div>
-                    <div class="calc__group">
-                        <p><input type="range" name="doc" min="1" max="100" step="1" value="50"></p>
+                    <div class="calc__group calc__group_range">
+                        <div class="calc__count" id="doc">0</div>
+                        <div><input type="range" name="doc" min="0" max="100" step="1" value="0"></div>
                     </div>
                     <div class="calc__subtitle">Количество сотрудников:</div>
-                    <div class="calc__text" id="person">1</div>
-                    <div class="calc__group">
-                        <p><input type="range" name="person" min="1" max="100" step="1" value="1"></p>
+                    <div class="calc__group calc__group_range">
+                        <div class="calc__count" id="person">1</div>
+                        <div><input type="range" name="person" min="1" max="100" step="1" value="1"></div>
                     </div>
                     <div class="calc__subtitle">Дополнительные опции:</div>
                     <div class="calc__group calc__group_checkbox">
                         <p><input class="calc__checkbox" type="checkbox" name="rar" id="rar" value="0"><label for="rar" class="calc__text">Декларации в Росалкогольрегулирование</label></p>
                         <p><input class="calc__checkbox" type="checkbox" name="dmdk" id="dmdk" value="0"><label for="dmdk" class="calc__text">Декларации в ГИИСДМДК</label></p>
-                    </div>    
+                    </div>
                     <div class="calc__footer">Итого: <span>2500</span> руб.</div>
                 </form>
 

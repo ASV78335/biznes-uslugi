@@ -836,9 +836,10 @@ form button {
  
 .calc input[type=range] {
     position: relative;
-    padding-left: 3rem;
     width: 500px;
+    left: 30px;
     appearance: none;
+    padding: 0 2px;
     padding-bottom: 2rem;
 }
 
@@ -848,12 +849,12 @@ form button {
     background-color: #fff;
 }
 
-.calc input[type=range]::-webkit-slider-thumb {
+.calc input[type=range]::-webkit-slider-thumb { /*Бегунок*/
     background: green;
     border: 1px solid green;
     cursor: pointer;
-    width:15px;
-    height: 15px;
+    width:16px;
+    height: 16px;
     -webkit-appearance: none;
     margin-top: -4px;
 }
@@ -874,7 +875,7 @@ form button {
     position: absolute;
     content: '0';
     top: 2rem;
-    left: 3rem;
+    left: 0;
     font-size: 1.6rem;
     color: grey;
 }
@@ -886,6 +887,33 @@ form button {
     left: 100%;
     font-size: 1.6rem;
     color: grey;
+}
+
+.calc__group_range {
+    display: block;
+    padding: 2rem 0;
+}
+
+.calc__count {
+    margin-bottom: 1rem;
+    top: -5px;
+    left: 8px;
+    width: 50px;
+    height: 25px;
+    border: 1px solid gray;
+    border-radius: 10%;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.calc__count::after {
+    position: absolute;
+    top: 23px;
+    left: 14px;
+    content: '';
+    height: 10px;
+    border: 10px solid transparent;
+    border-top: 10px solid gray;
 }
 
 .calc__group_checkbox {

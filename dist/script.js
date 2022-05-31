@@ -4805,12 +4805,22 @@ var calc = function calc() {
       textPerson = document.getElementById('person'),
       inputPerson = document.querySelector('input[name="person"]'),
       inputDocRect = inputDoc.getBoundingClientRect();
+
+  function roundTo5(num) {
+    var res = Math.round(num / 5) * 5;
+    if (res == 1) res = 0;
+    return res;
+  }
+
+  ;
   inputDoc.addEventListener('change', function () {
     textDoc.innerHTML = inputDoc.value;
   });
   inputDoc.addEventListener('click', function (event) {
-    inputDoc.value = Math.round((event.clientX - inputDocRect.left - 30) / 5);
+    inputDoc.value = roundTo5(Math.round((event.clientX - inputDocRect.left) / 5));
     textDoc.innerHTML = inputDoc.value;
+    textDoc.style.left = 2 + inputDoc.value * 5 + 'px';
+    console.log(inputDoc.value, textDoc.style.left);
   });
   inputPerson.addEventListener('change', function () {
     textPerson.innerHTML = inputPerson.value;
