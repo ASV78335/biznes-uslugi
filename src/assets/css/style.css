@@ -69,7 +69,13 @@ header {
     letter-spacing: 0.1rem;
     text-transform: uppercase;
     text-align: center;
+    background-image: radial-gradient(circle, #5dc44b, #336e28);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
 }
+
 
 /* ==================================Top==============================================================*/
 
@@ -261,6 +267,11 @@ flex-direction: column;
     line-height: 1.2;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
+    background-image: radial-gradient(circle, #5dc44b, #336e28);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
 }
 
 .promo__text {
@@ -338,6 +349,11 @@ flex-direction: column;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
     text-align: center;
+    background-image: radial-gradient(circle, #5dc44b, #336e28);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
 }
 
 .services__infoblock {
@@ -839,7 +855,7 @@ form button {
     width: 500px;
     left: 30px;
     appearance: none;
-    padding: 0 2px;
+    /* padding: 0 2px; */
     padding-bottom: 2rem;
 }
 
@@ -869,6 +885,8 @@ form button {
     background: green;
     border: 1px solid green;
     cursor: pointer;
+    width:16px;
+    height: 16px;
 }
 
 .calc input[type=range]::before {
@@ -880,9 +898,18 @@ form button {
     color: grey;
 }
 
-.calc input[type=range]::after {
+.calc input[name="doc"]::after {
     position: absolute;
     content: '100';
+    top: 2rem;
+    left: 100%;
+    font-size: 1.6rem;
+    color: grey;
+}
+
+.calc input[name="person"]::after {
+    position: absolute;
+    content: '10';
     top: 2rem;
     left: 100%;
     font-size: 1.6rem;
@@ -897,7 +924,7 @@ form button {
 .calc__count {
     margin-bottom: 1rem;
     top: -5px;
-    left: 8px;
+    left: 13px;
     width: 50px;
     height: 25px;
     border: 1px solid gray;

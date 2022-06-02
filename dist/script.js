@@ -4804,7 +4804,8 @@ var calc = function calc() {
       inputDoc = document.querySelector('input[name="doc"]'),
       textPerson = document.getElementById('person'),
       inputPerson = document.querySelector('input[name="person"]'),
-      inputDocRect = inputDoc.getBoundingClientRect();
+      inputDocRect = inputDoc.getBoundingClientRect(),
+      inputPersonRect = inputPerson.getBoundingClientRect();
 
   function roundTo5(num) {
     var res = Math.round(num / 5) * 5;
@@ -4817,13 +4818,27 @@ var calc = function calc() {
     textDoc.innerHTML = inputDoc.value;
   });
   inputDoc.addEventListener('click', function (event) {
+    var offset = 13;
+    var left;
     inputDoc.value = roundTo5(Math.round((event.clientX - inputDocRect.left) / 5));
     textDoc.innerHTML = inputDoc.value;
-    textDoc.style.left = 2 + inputDoc.value * 5 + 'px';
-    console.log(inputDoc.value, textDoc.style.left);
+    left = offset * (100 - inputDoc.value) / 100;
+    left = inputDoc.value * 5 + left;
+    if (left < offset) left = offset;
+    textDoc.style.left = left + 'px'; // console.log(event.clientX - inputDocRect.left, inputDoc.value, left);
   });
   inputPerson.addEventListener('change', function () {
     textPerson.innerHTML = inputPerson.value;
+  });
+  inputPerson.addEventListener('click', function (event) {
+    var offset = 13;
+    var left;
+    inputPerson.value = Math.round((event.clientX - inputPersonRect.left) / 50);
+    textPerson.innerHTML = inputPerson.value;
+    left = offset * (10 - inputPerson.value) / 10;
+    left = inputPerson.value * 50 + left;
+    if (left < offset) left = offset;
+    textPerson.style.left = left + 'px'; // console.log(event.clientX - inputPersonRect.left, inputPerson.value, left);
   });
 };
 
