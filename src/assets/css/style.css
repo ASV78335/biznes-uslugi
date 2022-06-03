@@ -857,6 +857,11 @@ form button {
     appearance: none;
     /* padding: 0 2px; */
     padding-bottom: 2rem;
+
+    height: 7px;
+    border-top: 1px solid green;
+    background-color: #fff;
+
 }
 
 .calc input[type=range]::-webkit-slider-runnable-track {
@@ -876,7 +881,7 @@ form button {
 }
 
 .calc input[type=range]::-moz-range-track {
-    height: 5px;
+    height: 7px;
     border: 1px solid green;
     background-color: green;
 }
